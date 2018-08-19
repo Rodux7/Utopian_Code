@@ -43,7 +43,7 @@ async def feed(ctx, username):
 async def comments(ctx, username):
   acc = Account(username.lower())
   for post in acc.comment_history(limit=5):
-    embed = discord.Embed(title=(description=(post["body"]),color=(0x00ff00))
+    embed = discord.Embed(description=(post["body"]),color=(0x00ff00))
     await bot.say(embed=embed)   
 
 # Run The Bot
